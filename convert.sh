@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [ "${1##*.}" != "webp" ]
 then
 	magick "$1" -resize 1920x1080^ \-gravity center -extent 1920x1080 -define webp:lossless=true "${1%.*}".webp
